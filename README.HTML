@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>请假条</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background: linear-gradient(120deg, #f0f4ff, #d9eaff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: white;
+      padding: 30px 50px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 400px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .btn {
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin: 0 10px;
+      cursor: pointer;
+      color: white;
+      transition: 0.2s;
+    }
+    .agree {
+      background: #4CAF50;
+    }
+    .approve {
+      background: #2196F3;
+    }
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>请假条</h2>
+    <p>尊敬的领导，因个人原因申请请假一天，望批准。</p>
+    <div>
+      <button class="btn agree" onclick="handleClick('同意')">同意</button>
+      <button class="btn approve" onclick="handleClick('批准')">批准</button>
+    </div>
+    <p id="result" style="margin-top:20px; font-weight:bold; color:#333;"></p>
+  </div>
+
+  <script>
+    function handleClick(option) {
+      document.getElementById("result").innerText = `您选择了：${option}`;
+    }
+  </script>
+
+</body>
+</html>
 
